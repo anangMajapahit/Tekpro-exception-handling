@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.eksepsi;
+
+/**
+ *
+ * @author Lenovo
+ */
+public class Eksepsion {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // 1..Aritmatic Ex
+        try{
+         int num1=30, num2=0;
+         int output=num1/num2;
+         System.out.println ("Result: "+output);
+      }
+      catch(ArithmeticException f){
+         System.out.println ("You Shouldn't divide a number by zero");
+      }
+        // 2..StringIndexOutOfBound Exception
+        try{
+	 String str="teknikpemrograman";
+	 System.out.println(str.length());;
+	 char c = str.charAt(0);
+	 c = str.charAt(40);
+	 System.out.println(c);
+      }catch(StringIndexOutOfBoundsException e){
+	  System.out.println("StringIndexOutOfBoundsException!!");
+       }
+        
+        //3..numberformat ex
+        
+	 int num=Integer.parseInt ("XYZ") ;
+	 System.out.println(num);
+             
+     //4..array indexoutofbound
+        try{
+        int a[]=new int[10];
+        //Array has only 10 elements
+        a[11] = 9;
+      }
+      catch(ArrayIndexOutOfBoundsException e){
+         System.out.println ("ArrayIndexOutOfBounds");
+      }
+        //5..nullpointer
+        try{
+		String str=null;
+		System.out.println (str.length());
+	}
+        catch(NullPointerException e){
+		System.out.println("NullPointerException..");
+	}
+   
+    }
+    
+}
